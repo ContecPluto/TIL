@@ -41,19 +41,19 @@ section .sky .sun {
 	left: 50%; 
 	margin-left: -100px; 
 	transform-origin: center 500px; 
-	animation: sun linear 20s infinite;
+	/*animation: sun linear 20s infinite;*/
 }
 section .sky .cloud1 {
 	position: absolute; 
 	top: -30px; 
 	left: 10%; 
-	animation: flow linear 10s infinite;
+	/*animation: flow linear 10s infinite;*/
 }
 section .sky .cloud2 {
 	position: absolute; 
 	top: 20px; 
 	left: 0%; 	
-	animation: flow linear 20s infinite;
+	/*animation: flow linear 20s infinite;*/
 }
 section .town .night { 
 	position: absolute; 
@@ -64,7 +64,7 @@ section .town .day {
 	position: absolute; 
 	bottom: 0px; 
 	left: 40px;
-	animation: day linear 20s infinite;
+	/*animation: day linear 20s infinite;*/
 }
 section .town .circle {
 	position: absolute; 
@@ -72,7 +72,7 @@ section .town .circle {
 	left: 50%; 
 	margin-left: -165px; 
 	opacity: 0.7;
-	animation: rotation linear 20s infinite; 	
+	/*animation: rotation linear 20s infinite; 	*/
 }
 section .people {	
 	width: 100%; 
@@ -80,22 +80,22 @@ section .people {
 	position: absolute; 
 	top: 0px;
 	left: 0px;
-	animation: day linear 20s infinite;	
+	/*animation: day linear 20s infinite;	*/
 }
 section .people .man {
 	position: absolute;
 	left: 0%;
 	bottom: 0px;
-	animation: flow linear 7s infinite;
+	/*animation: flow linear 7s infinite;*/
 }
 section .people .family {
 	position: absolute;
 	left: 0%;
 	bottom: 0px;
-	animation: flow linear 20s infinite;
+	/*animation: flow linear 20s infinite;*/
 }
 
-@keyframes rotation {
+/*@keyframes rotation {
 	0% {transform: rotate(0deg);}
 	100% {transform: rotate(360deg);}
 }
@@ -125,4 +125,4 @@ section .people .family {
 	10% { opacity: 1; }
 	80% { opacity: 1; }
 	100% { left: 90%; opacity: 0;}
-}
+}*/
