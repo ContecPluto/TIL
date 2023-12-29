@@ -2,17 +2,25 @@
 const sun = document.querySelector('.sun');
 const maxTime = 20000;
 let time = maxTime;
-setInterval(() => {
+const timer = setInterval(() => {
     if (time === 0) time = maxTime;
 
     if (sun) {
-        const rotateVal = ((360 * (time ? time / maxTime : 1)) + 90) * -1 
+        const timeVal = time ? time / maxTime : 1
+        const rotateVal = ((360 * timeVal) + 90) * -1 
         sun.style.transform = `rotate(${rotateVal}deg)`;
 
-        const test = ((rotateVal * -1) - 90)
-        let sunOpacity = (1 * (test / 180) - 1.0)
+        let sunOpacity;
+        if (0.75 <= timeVal && timeVal < 1) {
+            // 0 ~ 90
+            sunOpacity = 2.5 - 2 * timeVal
+        } else if (0.5 <= timeVal && timeVal < 0.75) {
+            // 90 ~ 180
+            sunOpacity = 4 * timeVal - 2 
+        } else {
+            sunOpacity = 0
+        }
         sun.style.opacity = sunOpacity;
-        console.log(sunOpacity)
     }
 
     time = time - 100;
