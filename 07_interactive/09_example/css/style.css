@@ -7,13 +7,13 @@
 }
 body { 
 	width: 100%;
-	height: 100vh;
-	overflow: hidden;
+	height: 400vh;
+	overflow: scroll;
 	animation: sky linear 20s infinite;
 }
 h1 { 
 	width: 1000px; 
-	position: absolute; 
+	position: fixed; 
 	top: 50%; 
 	left: 50%; 
 	transform: translate(-50%, 150%);	
@@ -25,18 +25,18 @@ h1 {
 section { 
 	width: 1000px; 
 	height: 400px; 
-	position: absolute; 
+	position: fixed; 
 	top: 50%; 
 	left: 50%; 
 	transform: translate(-50%, -70%); 
 }
 section .sky {
-	position: absolute; 
+	position: fixed; 
 	width: 100%; 
 	height: 100%;
 }
 section .sky .sun {
-	position: absolute; 
+	position: fixed; 
 	top: -150px; 
 	left: 50%; 
 	margin-left: -100px; 
@@ -44,30 +44,30 @@ section .sky .sun {
 	/*animation: sun linear 20s infinite;*/
 }
 section .sky .cloud1 {
-	position: absolute; 
+	position: fixed; 
 	top: -30px; 
 	left: 10%; 
 	/*animation: flow linear 10s infinite;*/
 }
 section .sky .cloud2 {
-	position: absolute; 
+	position: fixed; 
 	top: 20px; 
 	left: 0%; 	
 	/*animation: flow linear 20s infinite;*/
 }
 section .town .night { 
-	position: absolute; 
+	position: fixed; 
 	bottom: 0px; 
 	left: 40px;
 }
 section .town .day { 
-	position: absolute; 
+	position: fixed; 
 	bottom: 0px; 
 	left: 40px;
 	/*animation: day linear 20s infinite;*/
 }
 section .town .circle {
-	position: absolute; 
+	position: fixed; 
 	bottom: 104px; 
 	left: 50%; 
 	margin-left: -165px; 
@@ -77,19 +77,19 @@ section .town .circle {
 section .people {	
 	width: 100%; 
 	height: 100%; 
-	position: absolute; 
+	position: fixed; 
 	top: 0px;
 	left: 0px;
 	/*animation: day linear 20s infinite;	*/
 }
 section .people .man {
-	position: absolute;
+	position: fixed;
 	left: 0%;
 	bottom: 0px;
 	/*animation: flow linear 7s infinite;*/
 }
 section .people .family {
-	position: absolute;
+	position: fixed;
 	left: 0%;
 	bottom: 0px;
 	/*animation: flow linear 20s infinite;*/
