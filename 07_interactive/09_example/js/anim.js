@@ -16,6 +16,8 @@ canvas.width = w;
 canvas.height = h;
 const colours = [
     '#b08fcc',
+    '#b08fcc',
+    '#636888',
     '#636888',
     '#fcd2e2',
     '#b1e1e2',
@@ -55,18 +57,22 @@ window.addEventListener('scroll', () => {
     const fourRatio = rotateRatio % 0.25 * 4;
 
     let sunOpacity;
+    let dayOpacity;
     if (0.75 <= rotateRatio && rotateRatio < 1) {
         // 0 ~ 90
         sunOpacity = 2.5 - 2 * rotateRatio;
+        dayOpacity = 2.5 - 2 * rotateRatio;
     } else if (0.5 <= rotateRatio && rotateRatio < 0.75) {
         // 90 ~ 180
         sunOpacity = 4 * rotateRatio - 2;
+        dayOpacity = 4 * rotateRatio - 2;
     } else {
         sunOpacity = 0;
+        dayOpacity = -1 * (rotateRatio % 1) + 0.5;
     }
 
     sun.style.opacity = sunOpacity;
-    day.style.opacity = sunOpacity;
+    day.style.opacity = dayOpacity;
     people.style.opacity = sunOpacity;
 
     cloud1.style.left = `${90 - twoRatio * 90}%`;
